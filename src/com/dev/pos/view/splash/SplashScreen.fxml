@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.dev.pos.controller.SplashScreenController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="478.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.pos.controller.SplashScreenController">
+   <children>
+      <ImageView fitHeight="520.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../util/asset/bg-2.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectangleMain" arcHeight="5.0" arcWidth="5.0" fill="#d3d9deb1" height="28.0" layoutX="14.0" layoutY="438.0" stroke="BLACK" strokeType="INSIDE" width="692.0" />
+      <Rectangle fx:id="rectangleSub" arcHeight="5.0" arcWidth="5.0" fill="#2be459" height="28.0" layoutX="14.0" layoutY="438.0" stroke="BLACK" strokeType="INSIDE" width="54.0" />
+      <Label layoutX="309.0" layoutY="442.0" text="Loading..." textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProgress" layoutX="381.0" layoutY="442.0" text="25%" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
