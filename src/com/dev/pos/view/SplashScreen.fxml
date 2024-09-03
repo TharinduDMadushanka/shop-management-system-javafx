@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="520.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../util/asset/bg-2.jpg" />
+            <Image url="@../util/asset/bg.jpg" />
          </image>
       </ImageView>
       <Rectangle fx:id="rectangleMain" arcHeight="5.0" arcWidth="5.0" fill="#d3d9deb1" height="28.0" layoutX="14.0" layoutY="438.0" stroke="BLACK" strokeType="INSIDE" width="692.0" />
