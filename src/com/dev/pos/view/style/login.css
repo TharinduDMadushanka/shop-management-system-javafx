@@ -1,17 +1,17 @@
 .left-form {
-    -fx-background-color: #04060D;
+    -fx-background-color: #011C40;
     -fx-border-color: #000;
     -fx-border-width: 0.4px 0px 0.4px 0.4px;
 }
 
 .login-btn{
-    -fx-background-color: #222326;
+    -fx-background-color: #252252;
     -fx-cursor:hand;
     -fx-background-radius: 5px;
     -fx-text-fill: #F2F2F2;
 }
 .login-btn:hover{
-    -fx-background-color: #595959;
+    -fx-background-color: #433D91;
     -fx-text-fill: white;
 }
 .textfield{
@@ -21,7 +21,7 @@
     -fx-border-color: #000;
     -fx-border-width: .4px;
     -fx-border-radius: 4px;
-    -fx-font-family: Tahoma;
+    -fx-font-family: Arial;
 }
 .textfield:focused{
     -fx-background-color: #fff;

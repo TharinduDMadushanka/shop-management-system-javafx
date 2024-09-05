@@ -24,33 +24,33 @@
       </AnchorPane>
       <AnchorPane layoutX="500.0" layoutY="2.0" prefHeight="550.0" prefWidth="400.0">
          <children>
-            <FontAwesomeIcon glyphName="USER" layoutX="172.0" layoutY="76.0" size="6em" />
-            <Label layoutX="147.0" layoutY="96.0" text="Welcome" textFill="#04060d">
+            <FontAwesomeIcon fill="#252252" glyphName="USER" layoutX="172.0" layoutY="76.0" size="6em" />
+            <Label layoutX="147.0" layoutY="96.0" text="Welcome" textFill="#252252">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="txtUserName" layoutX="90.0" layoutY="217.0" prefHeight="40.0" prefWidth="234.0" promptText="Username" styleClass="textfield" stylesheets="@style/login.css">
+            <TextField fx:id="txtEmail" layoutX="90.0" layoutY="217.0" prefHeight="40.0" prefWidth="234.0" promptText="Email" styleClass="textfield" stylesheets="@style/login.css">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </TextField>
-            <Label layoutX="90.0" layoutY="199.0" text="Username" textFill="#0000009b">
+            <Label layoutX="90.0" layoutY="199.0" text="Email" textFill="#3732789c">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="90.0" layoutY="274.0" text="Password" textFill="#0000009b">
+            <Label layoutX="90.0" layoutY="274.0" text="Password" textFill="#3732789c">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
             <Button fx:id="btnLogin" layoutX="90.0" layoutY="354.0" mnemonicParsing="false" onAction="#loginOnAction" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" stylesheets="@style/login.css" text="Login">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Label layoutX="22.0" layoutY="512.0" text="Don't have an account?">
+            <Label layoutX="22.0" layoutY="512.0" text="Don't have an account?" textFill="#373278">
                <font>
                   <Font size="16.0" />
                </font>
