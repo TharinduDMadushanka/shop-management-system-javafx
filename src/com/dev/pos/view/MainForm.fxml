@@ -30,7 +30,7 @@
                   <Line endX="135.40000915527344" layoutX="111.0" layoutY="340.0" startX="-87.00001525878906" stroke="#ffffff6b" />
                   <Line endX="135.40000915527344" layoutX="111.0" layoutY="402.0" startX="-87.00001525878906" stroke="#ffffff6b" />
                   <Line endX="135.40000915527344" layoutX="111.0" layoutY="464.0" startX="-87.00001525878906" stroke="#ffffff6b" />
-                  <Button layoutX="24.0" layoutY="664.0" mnemonicParsing="false" onAction="#logoutOnAction" styleClass="sign-out" stylesheets="@style/MainForm.css" text="Logout">
+                  <Button fx:id="btnLogOut" layoutX="24.0" layoutY="664.0" mnemonicParsing="false" onAction="#logoutOnAction" styleClass="sign-out" stylesheets="@style/MainForm.css" text="Logout">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
