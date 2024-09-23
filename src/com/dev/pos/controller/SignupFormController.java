@@ -1,13 +1,14 @@
 package com.dev.pos.controller;
 
+import com.dev.pos.bo.BoFactory;
+import com.dev.pos.bo.custom.UserBo;
+import com.dev.pos.dto.UserDTO;
+import com.dev.pos.util.Enum.BoType;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -34,6 +35,8 @@ public class SignupFormController {
     @FXML
     private TextField txtUserName;
 
+    UserBo userBo = BoFactory.getInstance().getBo(BoType.USER);
+
     @FXML
     void loginOnAction(ActionEvent event) throws IOException {
         setUI("LoginForm");
@@ -41,6 +44,35 @@ public class SignupFormController {
 
     @FXML
     void signupOnAction(ActionEvent event) {
+
+        try {
+
+            UserDTO userDTO = new UserDTO(
+                    txtEmail.getText(),
+                    txtPassword.getText().trim()
+            );
+
+            String pw = txtPassword.getText().trim();
+            String ReEnteredPW = txtReEnteredPW.getText().trim();
+
+            if (pw.equals(ReEnteredPW)) {
+
+                boolean isSaved = userBo.saveUser(userDTO);
+
+                if (isSaved) {
+                    new Alert(Alert.AlertType.INFORMATION,"User successfully registered!").show();
+                    setUI("LoginForm");
+                }else {
+                    new Alert(Alert.AlertType.ERROR,"Something went wrong!").show();
+                }
+
+            }else {
+                new Alert(Alert.AlertType.ERROR,"Please Enter Confirm Password correctly..!").show();
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
