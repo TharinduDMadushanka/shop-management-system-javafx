@@ -1,6 +1,6 @@
 package com.dev.pos.entity;
 
-public class User {
+public class User implements SuperEntity{
 
     private String email;
     private String password;
