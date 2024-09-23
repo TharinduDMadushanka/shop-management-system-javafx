@@ -1,5 +1,33 @@
 .left-form{
-    -fx-background-color: #A6A6A6;
+    -fx-background-color: #16423C;
     -fx-border-color: #000;
     -fx-border-width: .4px 0px .4px .4px;
+}
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-font-size: 18px;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: Arial;
+    -fx-alignment: CENTER-LEFT;
+    -fx-font-weight: bold;
+
+}
+
+.nav-btn:hover {
+    -fx-translate-y: -3px;
+    -fx-text-fill: #cac9c9; /* Change text color on hover if needed */
+    -fx-effect: dropshadow( gaussian , rgba(0, 0, 0, 0.25) , 10, 0.5 , 0 , 2 );
+}
+
+.sign-out{
+    -fx-background-color: #80AF81;
+    -fx-cursor:hand;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #F2F2F2;
+}
+.sign-out:hover{
+    -fx-background-color: #e44747;
+    -fx-text-fill: white;
 }

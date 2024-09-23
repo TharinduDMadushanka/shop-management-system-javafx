@@ -1,5 +1,6 @@
 package com.dev.pos.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,7 +15,7 @@ public class MainFormController {
     private AnchorPane mainContext;
 
     public void initialize() {
-        setContext("DashboardForm");
+
     }
 
 
@@ -37,4 +38,21 @@ public class MainFormController {
 
     }
 
+    public void customerOnAction(ActionEvent actionEvent) {
+    }
+
+    public void productOnAction(ActionEvent actionEvent) {
+    }
+
+    public void placeOrderOnAction(ActionEvent actionEvent) {
+    }
+
+    public void OrderDetailOnAction(ActionEvent actionEvent) {
+    }
+
+    public void reportOnAction(ActionEvent actionEvent) {
+    }
+
+    public void logoutOnAction(ActionEvent actionEvent) {
+    }
 }

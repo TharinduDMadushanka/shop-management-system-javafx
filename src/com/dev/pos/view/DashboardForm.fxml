@@ -3,8 +3,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane fx:id="dashContext" prefHeight="720.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.pos.controller.DashboardFormController">
+<AnchorPane fx:id="dashContext" prefHeight="720.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.pos.controller.DashboardFormController">
    <children>
       <Label layoutX="265.0" layoutY="227.0" text="Dashboard" />
    </children>
