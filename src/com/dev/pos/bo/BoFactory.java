@@ -1,5 +1,7 @@
 package com.dev.pos.bo;
 
+import com.dev.pos.bo.impl.UserBoImpl;
+import com.dev.pos.entity.User;
 import com.dev.pos.util.Enum.BoType;
 
 public class BoFactory {
@@ -19,7 +21,7 @@ public class BoFactory {
     public <T> T getBo(BoType boType){
         switch(boType){
             case USER:
-
+                return (T) new UserBoImpl();
             default:
                 return null;
         }

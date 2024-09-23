@@ -15,15 +15,13 @@ public class CrudUtil {
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
         for (int i = 0; i < params.length; i++) {
-            preparedStatement.setObject(i + 1, params[i]);
+            preparedStatement.setObject((i + 1), params[i]);
         }
 
-        if (sql.startsWith("SELECT")) {
+        if(sql.startsWith("SELECT")){
             return (T) preparedStatement.executeQuery();
         }
-
-        return (T) (Boolean) (preparedStatement.executeUpdate() > 0);
-
+        return (T) (Boolean) (preparedStatement.executeUpdate() >0);
     }
 
 }

@@ -60,7 +60,7 @@
                   <Font size="14.0" />
                </font>
             </Hyperlink>
-            <PasswordField layoutX="90.0" layoutY="290.0" prefHeight="40.0" prefWidth="234.0" styleClass="textfield" stylesheets="@style/login.css">
+            <PasswordField fx:id="txtPassword" layoutX="90.0" layoutY="290.0" prefHeight="40.0" prefWidth="234.0" styleClass="textfield" stylesheets="@style/login.css">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
