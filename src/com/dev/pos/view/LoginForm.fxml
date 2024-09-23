@@ -11,7 +11,7 @@
 
 <AnchorPane fx:id="context" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.pos.controller.LoginFormController">
    <children>
-      <AnchorPane prefHeight="552.0" prefWidth="500.0" styleClass="left-form" stylesheets="@style/login.css">
+      <AnchorPane layoutY="-11.0" prefHeight="564.0" prefWidth="500.0" styleClass="left-form" stylesheets="@style/login.css">
          <children>
             <FontAwesomeIcon fill="WHITE" glyphName="SHOPPING_CART" layoutX="182.0" layoutY="262.0" size="9em" />
             <Label layoutX="78.0" layoutY="312.0" text="SHOP MANAGEMENT SYSTEM" textFill="WHITE">
@@ -24,8 +24,8 @@
       </AnchorPane>
       <AnchorPane layoutX="500.0" layoutY="2.0" prefHeight="550.0" prefWidth="400.0">
          <children>
-            <FontAwesomeIcon fill="#252252" glyphName="USER" layoutX="172.0" layoutY="76.0" size="6em" />
-            <Label layoutX="147.0" layoutY="96.0" text="Welcome" textFill="#252252">
+            <FontAwesomeIcon fill="#072615" glyphName="USER" layoutX="172.0" layoutY="76.0" size="6em" />
+            <Label layoutX="147.0" layoutY="96.0" text="Welcome" textFill="#072615">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>

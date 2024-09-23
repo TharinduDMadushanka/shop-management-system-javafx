@@ -1,17 +1,17 @@
 .left-form {
-    -fx-background-color: #011C40;
+    -fx-background-color: #072615;
     -fx-border-color: #000;
     -fx-border-width: 0.4px 0px 0.4px 0.4px;
 }
 
 .login-btn{
-    -fx-background-color: #252252;
+    -fx-background-color: #072615;
     -fx-cursor:hand;
     -fx-background-radius: 5px;
     -fx-text-fill: #F2F2F2;
 }
 .login-btn:hover{
-    -fx-background-color: #433D91;
+    -fx-background-color: #034207;
     -fx-text-fill: white;
 }
 .textfield{
