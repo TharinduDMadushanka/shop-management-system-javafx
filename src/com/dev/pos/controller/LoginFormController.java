@@ -46,8 +46,8 @@ public class LoginFormController {
             if(user != null){
                 if(PasswordManager.checkPassword(txtPassword.getText(), user.getPassword())){
                     UserSessionData.email= txtEmail.getText().trim();
-//                    setUI("DashboardForm");
-                    new Alert(Alert.AlertType.INFORMATION, "Hi.!").show();
+                    setUI("MainForm");
+//                    new Alert(Alert.AlertType.INFORMATION, "Hi.!").show();
                 }else {
                     new Alert(Alert.AlertType.WARNING, "Wrong password.!").show();
                 }
