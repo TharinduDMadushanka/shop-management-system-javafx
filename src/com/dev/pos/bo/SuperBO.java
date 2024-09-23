@@ -1,4 +1,4 @@
 package com.dev.pos.bo;
 
-public class SuperBO {
+public interface SuperBO {
 }
