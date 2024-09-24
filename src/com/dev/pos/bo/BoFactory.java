@@ -1,5 +1,6 @@
 package com.dev.pos.bo;
 
+import com.dev.pos.bo.impl.CustomerBoImpl;
 import com.dev.pos.bo.impl.UserBoImpl;
 import com.dev.pos.entity.User;
 import com.dev.pos.util.Enum.BoType;
@@ -22,6 +23,8 @@ public class BoFactory {
         switch(boType){
             case USER:
                 return (T) new UserBoImpl();
+            case CUSTOMER:
+                return (T) new CustomerBoImpl();
             default:
                 return null;
         }

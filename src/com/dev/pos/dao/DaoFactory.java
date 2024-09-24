@@ -1,6 +1,7 @@
 package com.dev.pos.dao;
 
 import com.dev.pos.bo.SuperBO;
+import com.dev.pos.dao.impl.CustomerDaoImpl;
 import com.dev.pos.dao.impl.UserDAOImpl;
 import com.dev.pos.util.Enum.DaoType;
 
@@ -22,7 +23,8 @@ public class DaoFactory {
         switch (daoType) {
             case USER:
                 return new UserDAOImpl();
-
+            case CUSTOMER:
+                return new CustomerDaoImpl();
             default:
                 return null;
         }
