@@ -25,12 +25,15 @@ public class MainFormController {
     }
 
     public void customerOnAction(ActionEvent actionEvent) {
+        setContext("CustomerForm");
     }
 
     public void productOnAction(ActionEvent actionEvent) {
+        setContext("ProductForm");
     }
 
     public void placeOrderOnAction(ActionEvent actionEvent) {
+        setContext("PlaceOrderForm");
     }
 
     public void OrderDetailOnAction(ActionEvent actionEvent) {
