@@ -2,9 +2,32 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="dashContext" prefHeight="720.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.pos.controller.DashboardFormController">
+<AnchorPane fx:id="dashContext" prefHeight="620.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.pos.controller.DashboardFormController">
    <children>
-      <Label layoutX="265.0" layoutY="227.0" text="Dashboard" />
+      <AnchorPane layoutX="214.0" layoutY="151.0" prefHeight="620.0" prefWidth="805.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="4.0" layoutY="10.0" prefHeight="599.0" prefWidth="788.0" styleClass="bg" stylesheets="@style/Dashboard.css">
+               <children>
+                  <AnchorPane layoutY="4.0" prefHeight="87.0" prefWidth="788.0" styleClass="title-bar" stylesheets="@style/Dashboard.css">
+                     <children>
+                        <Label layoutX="165.0" layoutY="22.0" text="Shop Management System" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="4.0" layoutY="563.0" prefHeight="35.0" prefWidth="780.0" styleClass="title-bar" stylesheets="@style/Dashboard.css">
+                     <children>
+                        <Label layoutX="11.0" layoutY="9.0" text="\@Tharindu Dilshan Madushanka " textFill="WHITE" />
+                        <Label fx:id="txtDateTime" layoutX="657.0" layoutY="9.0" text="2024-07-12  2:45 pm" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

@@ -8,14 +8,14 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.pos.controller.MainFormController">
+<AnchorPane prefHeight="620.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.pos.controller.MainFormController">
    <children>
-      <BorderPane layoutX="146.0" layoutY="110.0" prefHeight="720.0" prefWidth="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane layoutX="146.0" layoutY="110.0" prefHeight="620.0" prefWidth="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <AnchorPane prefHeight="720.0" prefWidth="320.0" styleClass="left-form" stylesheets="@style/MainForm.css" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="620.0" prefWidth="275.0" styleClass="left-form" stylesheets="@style/MainForm.css" BorderPane.alignment="CENTER">
                <children>
-                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="141.0" layoutY="79.0" size="4em" />
-                  <Label layoutX="82.0" layoutY="102.0" text="Welcome Admin" textFill="WHITE">
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="104.0" layoutY="79.0" size="4em" />
+                  <Label layoutX="45.0" layoutY="99.0" text="Welcome Admin" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
@@ -30,7 +30,7 @@
                   <Line endX="135.40000915527344" layoutX="111.0" layoutY="340.0" startX="-87.00001525878906" stroke="#ffffff6b" />
                   <Line endX="135.40000915527344" layoutX="111.0" layoutY="402.0" startX="-87.00001525878906" stroke="#ffffff6b" />
                   <Line endX="135.40000915527344" layoutX="111.0" layoutY="464.0" startX="-87.00001525878906" stroke="#ffffff6b" />
-                  <Button fx:id="btnLogOut" layoutX="24.0" layoutY="664.0" mnemonicParsing="false" onAction="#logoutOnAction" styleClass="sign-out" stylesheets="@style/MainForm.css" text="Logout">
+                  <Button fx:id="btnLogOut" layoutX="24.0" layoutY="576.0" mnemonicParsing="false" onAction="#logoutOnAction" styleClass="sign-out" stylesheets="@style/MainForm.css" text="Logout">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -39,9 +39,9 @@
             </AnchorPane>
          </left>
          <center>
-            <AnchorPane prefHeight="920.0" prefWidth="760.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="620.0" prefWidth="805.0" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane fx:id="mainContext" layoutX="138.0" layoutY="160.0" prefHeight="720.0" prefWidth="760.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="mainContext" layoutX="138.0" layoutY="160.0" prefHeight="620.0" prefWidth="805.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
          </center>
