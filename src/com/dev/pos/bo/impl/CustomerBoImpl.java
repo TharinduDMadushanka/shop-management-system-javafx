@@ -8,30 +8,29 @@ import com.dev.pos.entity.Customer;
 import com.dev.pos.util.Enum.DaoType;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class CustomerBoImpl implements CustomerBo {
 
-    CustomerDao customerDao = (CustomerDao) DaoFactory.getInstance().getDao(DaoType.CUSTOMER);
+    private final CustomerDao customerDao = (CustomerDao) DaoFactory.getInstance().getDao(DaoType.CUSTOMER);
 
     @Override
-    public boolean saveCustomer(CustomerDto customerDTO) throws Exception {
+    public boolean saveCustomer(CustomerDto customerDto) throws Exception {
         return customerDao.save(new Customer(
-                customerDTO.getEmail(),
-                customerDTO.getName(),
-                customerDTO.getContact(),
-                customerDTO.getSalary()
+                customerDto.getEmail(),
+                customerDto.getName(),
+                customerDto.getContact(),
+                customerDto.getSalary()
         ));
     }
 
     @Override
-    public boolean updateCustomer(CustomerDto customerDTO) throws Exception {
+    public boolean updateCustomer(CustomerDto customerDto) throws Exception {
         return customerDao.update(new Customer(
-                customerDTO.getEmail(),
-                customerDTO.getName(),
-                customerDTO.getContact(),
-                customerDTO.getSalary()
+                customerDto.getEmail(),
+                customerDto.getName(),
+                customerDto.getContact(),
+                customerDto.getSalary()
         ));
     }
 
@@ -56,30 +55,30 @@ public class CustomerBoImpl implements CustomerBo {
 
     @Override
     public List<CustomerDto> searchCustomer(String value) throws Exception {
-        List<CustomerDto> customerDTOList = new ArrayList<>();
-        for (Customer c : customerDao.search(value)) {
-            customerDTOList.add(new CustomerDto(
-                    c.getEmail(),
-                    c.getName(),
-                    c.getContact(),
-                    c.getSalary()
+        List<CustomerDto> customerDtoList = new ArrayList<>();
+        for (Customer customer : customerDao.search(value)) {
+            customerDtoList.add(new CustomerDto(
+                    customer.getEmail(),
+                    customer.getName(),
+                    customer.getContact(),
+                    customer.getSalary()
             ));
         }
-        return customerDTOList;
+        return customerDtoList;
     }
 
     @Override
     public List<CustomerDto> findAllCustomer() throws Exception {
         List<Customer> allCustomers = customerDao.findAll();
-        List<CustomerDto> customerDTOs = new ArrayList<>();
-        for (Customer c : allCustomers) {
-            customerDTOs.add(new CustomerDto(
-                    c.getEmail(),
-                    c.getName(),
-                    c.getContact(),
-                    c.getSalary()
+        List<CustomerDto> customerDtoList = new ArrayList<>();
+        for (Customer customer : allCustomers) {
+            customerDtoList.add(new CustomerDto(
+                    customer.getEmail(),
+                    customer.getName(),
+                    customer.getContact(),
+                    customer.getSalary()
             ));
         }
-        return customerDTOs;
+        return customerDtoList;
     }
 }

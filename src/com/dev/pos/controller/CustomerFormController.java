@@ -1,61 +1,41 @@
 package com.dev.pos.controller;
 
+import com.dev.pos.util.Enum.BoType;
 import com.dev.pos.bo.BoFactory;
 import com.dev.pos.bo.custom.CustomerBo;
+import com.dev.pos.bo.impl.CustomerBoImpl;
+//import com.dev.pos.dao.DatabaseAccessCode;
 import com.dev.pos.dto.CustomerDto;
 import com.dev.pos.dto.tm.CustomerTm;
-import com.dev.pos.util.Enum.BoType;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Optional;
 
 public class CustomerFormController {
-
+    public AnchorPane context;
+    public TextField txtEmail;
+    public TextField txtName;
+    public TextField txtContact;
+    public TextField txtSalary;
     public Button btnSave;
-    @FXML
-    private TableColumn<CustomerTm,String> colContact;
-
-    @FXML
-    private TableColumn<CustomerTm, Button> colDelete;
-
-    @FXML
-    private TableColumn<CustomerTm,String> colEmail;
-
-    @FXML
-    private TableColumn<CustomerTm,String> colName;
-
-    @FXML
-    private TableColumn<CustomerTm,Integer> colNo;
-
-    @FXML
-    private TableColumn<CustomerTm,Double> colSalary;
-
-    @FXML
-    private AnchorPane customerContext;
-
-    @FXML
-    private TableView<CustomerTm> tblCustomer;
-
-    @FXML
-    private TextField txtContact;
-
-    @FXML
-    private TextField txtEmail;
-
-    @FXML
-    private TextField txtName;
-
-    @FXML
-    private TextField txtSalary;
-
-    @FXML
-    private TextField txtSearch;
+    public TextField txtSearch;
+    public TableView<CustomerTm> tblCustomer;
+    public TableColumn<CustomerTm,Integer> colNo;
+    public TableColumn<CustomerTm,String> colName;
+    public TableColumn<CustomerTm,String>  colEmail;
+    public TableColumn<CustomerTm,String>  colContact;
+    public TableColumn<CustomerTm,Double>  colSalary;
+    public TableColumn<CustomerTm,Button>  colDelete;
 
     CustomerBo customerBo = BoFactory.getInstance().getBo(BoType.CUSTOMER);
 
@@ -88,8 +68,7 @@ public class CustomerFormController {
 
     }
 
-    @FXML
-    void SaveOnAction(ActionEvent event) throws Exception {
+    public void SaveOnAction(ActionEvent actionEvent) throws Exception {
 
         CustomerDto dto = new CustomerDto(
                 txtEmail.getText(),
@@ -126,7 +105,13 @@ public class CustomerFormController {
                 loadCustomer(searchText);
             }
         }
+    }
 
+    private void setUI(String location) throws IOException {
+        Stage stage = (Stage) context.getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/" + location + ".fxml"))));
+        stage.show();
+        stage.centerOnScreen();
     }
 
     private void clearFields() {

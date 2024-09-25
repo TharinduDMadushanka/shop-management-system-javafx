@@ -1,7 +1,6 @@
 package com.dev.pos.dao;
 
 import com.dev.pos.db.DBConnection;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

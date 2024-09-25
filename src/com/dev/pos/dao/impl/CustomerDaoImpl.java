@@ -2,36 +2,50 @@ package com.dev.pos.dao.impl;
 
 import com.dev.pos.dao.CrudUtil;
 import com.dev.pos.dao.custom.CustomerDao;
+import com.dev.pos.db.DBConnection;
+import com.dev.pos.dto.CustomerDto;
 import com.dev.pos.entity.Customer;
 
+import java.awt.event.TextEvent;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class CustomerDaoImpl implements CustomerDao {
     @Override
-    public boolean save(Customer customer) throws Exception {
+    public boolean save(Customer customer) throws SQLException, ClassNotFoundException {
+
         String sql = "INSERT INTO customer VALUES(?,?,?,?)";
         return CrudUtil.execute(sql,customer.getEmail(),customer.getName(),customer.getContact(),customer.getSalary());
+
     }
 
     @Override
-    public boolean update(Customer customer) throws Exception {
+    public boolean update(Customer customer) throws SQLException, ClassNotFoundException {
+
         String sql = "UPDATE customer SET name = ?, contact = ?, salary = ? WHERE email = ?";
 
         return CrudUtil.execute(sql,customer.getName(),customer.getContact(),customer.getSalary(),customer.getEmail());
+
+
     }
 
     @Override
-    public boolean delete(String email) throws Exception {
+    public boolean delete(String email) throws SQLException, ClassNotFoundException {
+
         String sql = "DELETE FROM customer WHERE email = ?";
 
         return CrudUtil.execute(sql,email);
+
     }
 
     @Override
-    public Customer find(String email) throws Exception {
+    public Customer find(String email) throws SQLException, ClassNotFoundException {
+
         String sql = "SELECT * FROM customer WHERE email = ?";
 
         ResultSet resultSet = CrudUtil.execute(sql,email);
@@ -45,10 +59,12 @@ public class CustomerDaoImpl implements CustomerDao {
             );
         }
         return null;
+
     }
 
     @Override
-    public List<Customer> findAll() throws Exception {
+    public List<Customer> findAll() throws SQLException, ClassNotFoundException {
+
         String sql = "SELECT * FROM customer";
         ResultSet resultSet = CrudUtil.execute(sql);
 
@@ -64,10 +80,11 @@ public class CustomerDaoImpl implements CustomerDao {
                     ));
         }
         return customerList;
+
     }
 
     @Override
-    public List<Customer> search(String value) throws Exception {
+    public List<Customer> search(String value) throws SQLException, ClassNotFoundException {
         value = "%" + value + "%";
 
         String sql = "SELECT * FROM customer WHERE email LIKE ? || name LIKE ? || contact LIKE ?";
@@ -84,5 +101,6 @@ public class CustomerDaoImpl implements CustomerDao {
             ));
         }
         return customerList;
+
     }
 }
